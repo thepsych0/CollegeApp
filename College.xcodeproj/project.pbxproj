@@ -7,18 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7209C4528175FC0003658F4 /* ServerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C4428175FC0003658F4 /* ServerMock.swift */; };
+		D7209C49281760AD003658F4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C48281760AD003658F4 /* LoginScreen.swift */; };
+		D7209C4C28176687003658F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C4B28176687003658F4 /* LoginViewModel.swift */; };
+		D728906A2815CF8200815561 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72890692815CF8200815561 /* StartScreen.swift */; };
+		D728906D2815D4A100815561 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728906C2815D4A100815561 /* StartViewModel.swift */; };
+		D72890702815E9F700815561 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728906F2815E9F700815561 /* Subject.swift */; };
+		D72890722815EAEE00815561 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72890712815EAEE00815561 /* Data.swift */; };
+		D72890742815ED9D00815561 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72890732815ED9D00815561 /* ScheduleViewModel.swift */; };
+		D7B863962818942000DE538F /* StudentAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863952818942000DE538F /* StudentAccountScreen.swift */; };
+		D7B863992818970200DE538F /* TabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863982818970200DE538F /* TabsScreen.swift */; };
+		D7B8639B2818977D00DE538F /* StudentAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8639A2818977D00DE538F /* StudentAccountViewModel.swift */; };
+		D7B8639D28189D0600DE538F /* TabsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8639C28189D0600DE538F /* TabsViewModel.swift */; };
+		D7B863A32818AAF900DE538F /* TeacherAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863A22818AAF900DE538F /* TeacherAccountScreen.swift */; };
+		D7B863A52818AB0600DE538F /* TeacherAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863A42818AB0600DE538F /* TeacherAccountViewModel.swift */; };
+		D7B863A82818ABA000DE538F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863A72818ABA000DE538F /* Student.swift */; };
+		D7B863AA2818ABA800DE538F /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863A92818ABA800DE538F /* Teacher.swift */; };
 		D7DD6E7C27E3BD0300976B16 /* CollegeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD6E7B27E3BD0300976B16 /* CollegeApp.swift */; };
-		D7DD6E7E27E3BD0300976B16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD6E7D27E3BD0300976B16 /* ContentView.swift */; };
+		D7DD6E7E27E3BD0300976B16 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD6E7D27E3BD0300976B16 /* ScheduleScreen.swift */; };
 		D7DD6E8027E3BD0500976B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DD6E7F27E3BD0500976B16 /* Assets.xcassets */; };
 		D7DD6E8327E3BD0500976B16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DD6E8227E3BD0500976B16 /* Preview Assets.xcassets */; };
+		D7FF7190281939AA007D8CBF /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF718F281939AA007D8CBF /* Schedule.swift */; };
+		D7FF719328193E3D007D8CBF /* WeeksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF719228193E3D007D8CBF /* WeeksViewModel.swift */; };
+		D7FF719528193E5B007D8CBF /* WeeksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF719428193E5B007D8CBF /* WeeksScreen.swift */; };
+		D7FF719728193EBE007D8CBF /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF719628193EBE007D8CBF /* Week.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7209C4428175FC0003658F4 /* ServerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMock.swift; sourceTree = "<group>"; };
+		D7209C48281760AD003658F4 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		D7209C4B28176687003658F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D72890692815CF8200815561 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
+		D728906C2815D4A100815561 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		D728906F2815E9F700815561 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		D72890712815EAEE00815561 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D72890732815ED9D00815561 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		D7B863952818942000DE538F /* StudentAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAccountScreen.swift; sourceTree = "<group>"; };
+		D7B863982818970200DE538F /* TabsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsScreen.swift; sourceTree = "<group>"; };
+		D7B8639A2818977D00DE538F /* StudentAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAccountViewModel.swift; sourceTree = "<group>"; };
+		D7B8639C28189D0600DE538F /* TabsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewModel.swift; sourceTree = "<group>"; };
+		D7B863A22818AAF900DE538F /* TeacherAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAccountScreen.swift; sourceTree = "<group>"; };
+		D7B863A42818AB0600DE538F /* TeacherAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAccountViewModel.swift; sourceTree = "<group>"; };
+		D7B863A72818ABA000DE538F /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		D7B863A92818ABA800DE538F /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		D7DD6E7827E3BD0300976B16 /* College.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = College.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DD6E7B27E3BD0300976B16 /* CollegeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeApp.swift; sourceTree = "<group>"; };
-		D7DD6E7D27E3BD0300976B16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D7DD6E7D27E3BD0300976B16 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
 		D7DD6E7F27E3BD0500976B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7DD6E8227E3BD0500976B16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7FF718F281939AA007D8CBF /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		D7FF719228193E3D007D8CBF /* WeeksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksViewModel.swift; sourceTree = "<group>"; };
+		D7FF719428193E5B007D8CBF /* WeeksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksScreen.swift; sourceTree = "<group>"; };
+		D7FF719628193EBE007D8CBF /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +72,118 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7209C4328175FB0003658F4 /* ServerMock */ = {
+			isa = PBXGroup;
+			children = (
+				D7209C4428175FC0003658F4 /* ServerMock.swift */,
+			);
+			path = ServerMock;
+			sourceTree = "<group>";
+		};
+		D7209C4628176074003658F4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D7B8639E28189E5F00DE538F /* Common */,
+				D7B8639F28189E7300DE538F /* Student */,
+				D7B863A02818AA3700DE538F /* Teacher */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D7209C4728176089003658F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D7209C48281760AD003658F4 /* LoginScreen.swift */,
+				D7209C4B28176687003658F4 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D7209C4D2817E1E5003658F4 /* StudentAccount */ = {
+			isa = PBXGroup;
+			children = (
+				D7B863952818942000DE538F /* StudentAccountScreen.swift */,
+				D7B8639A2818977D00DE538F /* StudentAccountViewModel.swift */,
+			);
+			path = StudentAccount;
+			sourceTree = "<group>";
+		};
+		D72890682815CACC00815561 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				D7DD6E7D27E3BD0300976B16 /* ScheduleScreen.swift */,
+				D72890732815ED9D00815561 /* ScheduleViewModel.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		D728906B2815D49000815561 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				D72890692815CF8200815561 /* StartScreen.swift */,
+				D728906C2815D4A100815561 /* StartViewModel.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		D728906E2815E9CF00815561 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D728906F2815E9F700815561 /* Subject.swift */,
+				D7B863A72818ABA000DE538F /* Student.swift */,
+				D7B863A92818ABA800DE538F /* Teacher.swift */,
+				D7FF718F281939AA007D8CBF /* Schedule.swift */,
+				D7FF719628193EBE007D8CBF /* Week.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7B86397281896ED00DE538F /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				D7B863982818970200DE538F /* TabsScreen.swift */,
+				D7B8639C28189D0600DE538F /* TabsViewModel.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		D7B8639E28189E5F00DE538F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D7209C4728176089003658F4 /* Login */,
+				D728906B2815D49000815561 /* Start */,
+				D7FF719128193E2C007D8CBF /* Weeks */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D7B8639F28189E7300DE538F /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				D72890682815CACC00815561 /* Schedule */,
+				D7209C4D2817E1E5003658F4 /* StudentAccount */,
+				D7B86397281896ED00DE538F /* Tabs */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		D7B863A02818AA3700DE538F /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+				D7B863A12818AAD800DE538F /* TeacherAccount */,
+			);
+			path = Teacher;
+			sourceTree = "<group>";
+		};
+		D7B863A12818AAD800DE538F /* TeacherAccount */ = {
+			isa = PBXGroup;
+			children = (
+				D7B863A22818AAF900DE538F /* TeacherAccountScreen.swift */,
+				D7B863A42818AB0600DE538F /* TeacherAccountViewModel.swift */,
+			);
+			path = TeacherAccount;
+			sourceTree = "<group>";
+		};
 		D7DD6E6F27E3BD0300976B16 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +203,13 @@
 		D7DD6E7A27E3BD0300976B16 /* College */ = {
 			isa = PBXGroup;
 			children = (
+				D7209C4628176074003658F4 /* UI */,
+				D7209C4328175FB0003658F4 /* ServerMock */,
+				D728906E2815E9CF00815561 /* Models */,
 				D7DD6E7B27E3BD0300976B16 /* CollegeApp.swift */,
-				D7DD6E7D27E3BD0300976B16 /* ContentView.swift */,
 				D7DD6E7F27E3BD0500976B16 /* Assets.xcassets */,
 				D7DD6E8127E3BD0500976B16 /* Preview Content */,
+				D72890712815EAEE00815561 /* Data.swift */,
 			);
 			path = College;
 			sourceTree = "<group>";
@@ -65,6 +220,15 @@
 				D7DD6E8227E3BD0500976B16 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D7FF719128193E2C007D8CBF /* Weeks */ = {
+			isa = PBXGroup;
+			children = (
+				D7FF719428193E5B007D8CBF /* WeeksScreen.swift */,
+				D7FF719228193E3D007D8CBF /* WeeksViewModel.swift */,
+			);
+			path = Weeks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +301,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7DD6E7E27E3BD0300976B16 /* ContentView.swift in Sources */,
+				D72890722815EAEE00815561 /* Data.swift in Sources */,
+				D728906A2815CF8200815561 /* StartScreen.swift in Sources */,
+				D7B8639D28189D0600DE538F /* TabsViewModel.swift in Sources */,
+				D7209C49281760AD003658F4 /* LoginScreen.swift in Sources */,
+				D72890702815E9F700815561 /* Subject.swift in Sources */,
+				D72890742815ED9D00815561 /* ScheduleViewModel.swift in Sources */,
+				D7B863AA2818ABA800DE538F /* Teacher.swift in Sources */,
+				D7B863A82818ABA000DE538F /* Student.swift in Sources */,
+				D7B863992818970200DE538F /* TabsScreen.swift in Sources */,
+				D7FF719528193E5B007D8CBF /* WeeksScreen.swift in Sources */,
+				D7209C4528175FC0003658F4 /* ServerMock.swift in Sources */,
+				D7B863962818942000DE538F /* StudentAccountScreen.swift in Sources */,
+				D728906D2815D4A100815561 /* StartViewModel.swift in Sources */,
+				D7DD6E7E27E3BD0300976B16 /* ScheduleScreen.swift in Sources */,
+				D7209C4C28176687003658F4 /* LoginViewModel.swift in Sources */,
+				D7B8639B2818977D00DE538F /* StudentAccountViewModel.swift in Sources */,
+				D7B863A52818AB0600DE538F /* TeacherAccountViewModel.swift in Sources */,
+				D7FF7190281939AA007D8CBF /* Schedule.swift in Sources */,
 				D7DD6E7C27E3BD0300976B16 /* CollegeApp.swift in Sources */,
+				D7B863A32818AAF900DE538F /* TeacherAccountScreen.swift in Sources */,
+				D7FF719328193E3D007D8CBF /* WeeksViewModel.swift in Sources */,
+				D7FF719728193EBE007D8CBF /* Week.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
