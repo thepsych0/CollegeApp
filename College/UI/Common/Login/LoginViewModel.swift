@@ -21,8 +21,8 @@ import Combine
         case .teacher:
             let result = ServerMock.authorizeTeacher(login: login, password: password)
             switch result {
-            case .success(let student):
-                self.student = student
+            case .success(let teacher):
+                self.teacher = teacher
                 shouldFinishLogin = true
             case .failure(let error):
                 if error == .wrongCredentials {
@@ -43,7 +43,7 @@ import Combine
         }
     }
 
-    var destination: AnyView? {
+    func destination(isPresented: Binding<Bool>) -> AnyView? {
         switch userType {
         case .teacher:
             guard let teacher = teacher else {
@@ -51,14 +51,14 @@ import Combine
             }
 
             let accountViewModel = TeacherAccountViewModel(teacher: teacher)
-            return AnyView(TeacherAccountScreen(viewModel: accountViewModel))
+            return AnyView(TeacherAccountScreen(viewModel: accountViewModel, isPresented: isPresented))
         case .student:
             guard let student = student else {
                 return nil
             }
 
             let accountViewModel = StudentAccountViewModel(student: student)
-            return AnyView(StudentAccountScreen(viewModel: accountViewModel))
+            return AnyView(StudentAccountScreen(viewModel: accountViewModel, isPresented: isPresented))
         }
     }
 

@@ -3,14 +3,10 @@ import Combine
 
 @MainActor final class StudentAccountViewModel: ObservableObject {
     @Published var student: Student
-    @Published var shouldShowSchedule = false
 
     init(student: Student) {
+        Student.current = student
         self.student = student
-    }
-
-    func didTapScheduleButton() {
-        shouldShowSchedule = true
     }
 
     var imageName: String {
@@ -22,8 +18,8 @@ import Combine
         }
     }
 
-    var scheduleDestination: AnyView {
-        let viewModel = WeekViewModel()
-        return AnyView(WeeksScreen(viewModel: viewModel))
+    func scheduleDestination(isPresented: Binding<Bool>) -> AnyView {
+        let viewModel = WeekViewModel(userType: .student)
+        return AnyView(WeeksScreen(viewModel: viewModel, isPresented: isPresented))
     }
 }

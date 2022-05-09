@@ -7,58 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D706B2512821B8530014A16A /* HomeworkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706B2502821B8530014A16A /* HomeworkObject.swift */; };
 		D7209C4528175FC0003658F4 /* ServerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C4428175FC0003658F4 /* ServerMock.swift */; };
 		D7209C49281760AD003658F4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C48281760AD003658F4 /* LoginScreen.swift */; };
 		D7209C4C28176687003658F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C4B28176687003658F4 /* LoginViewModel.swift */; };
 		D728906A2815CF8200815561 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72890692815CF8200815561 /* StartScreen.swift */; };
 		D728906D2815D4A100815561 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728906C2815D4A100815561 /* StartViewModel.swift */; };
 		D72890702815E9F700815561 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728906F2815E9F700815561 /* Subject.swift */; };
-		D72890722815EAEE00815561 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72890712815EAEE00815561 /* Data.swift */; };
-		D72890742815ED9D00815561 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72890732815ED9D00815561 /* ScheduleViewModel.swift */; };
+		D72890742815ED9D00815561 /* StudentScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72890732815ED9D00815561 /* StudentScheduleViewModel.swift */; };
+		D733C84B2820B7CB003E39CC /* SubjectActivityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733C84A2820B7CB003E39CC /* SubjectActivityObject.swift */; };
+		D733C84E282152FC003E39CC /* DatabaseMock+Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733C84D282152FC003E39CC /* DatabaseMock+Groups.swift */; };
+		D733C853282163D1003E39CC /* GiveMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733C852282163D1003E39CC /* GiveMark.swift */; };
 		D7B863962818942000DE538F /* StudentAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863952818942000DE538F /* StudentAccountScreen.swift */; };
-		D7B863992818970200DE538F /* TabsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863982818970200DE538F /* TabsScreen.swift */; };
 		D7B8639B2818977D00DE538F /* StudentAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8639A2818977D00DE538F /* StudentAccountViewModel.swift */; };
-		D7B8639D28189D0600DE538F /* TabsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B8639C28189D0600DE538F /* TabsViewModel.swift */; };
 		D7B863A32818AAF900DE538F /* TeacherAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863A22818AAF900DE538F /* TeacherAccountScreen.swift */; };
 		D7B863A52818AB0600DE538F /* TeacherAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863A42818AB0600DE538F /* TeacherAccountViewModel.swift */; };
 		D7B863A82818ABA000DE538F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863A72818ABA000DE538F /* Student.swift */; };
 		D7B863AA2818ABA800DE538F /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B863A92818ABA800DE538F /* Teacher.swift */; };
+		D7C716C52823ED4100832C09 /* Binding+Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C716C42823ED4000832C09 /* Binding+Just.swift */; };
+		D7C7AF152825394600C0D23C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7AF142825394600C0D23C /* Group.swift */; };
+		D7C7AF172825396700C0D23C /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7AF162825396700C0D23C /* Gender.swift */; };
+		D7C7AF192825434900C0D23C /* DatabaseMock+Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C7AF182825434900C0D23C /* DatabaseMock+Teacher.swift */; };
+		D7D8395B282076EA00F9938E /* TeacherScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D8395A282076EA00F9938E /* TeacherScheduleScreen.swift */; };
+		D7D8395D282081B200F9938E /* TeacherScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D8395C282081B200F9938E /* TeacherScheduleViewModel.swift */; };
+		D7D839602820933700F9938E /* SubjectActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D8395F2820933700F9938E /* SubjectActivityViewModel.swift */; };
+		D7D839622820934300F9938E /* SubjectActivityScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D839612820934300F9938E /* SubjectActivityScreen.swift */; };
+		D7D8396528209CB700F9938E /* DatabaseMock+Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D8396428209CB700F9938E /* DatabaseMock+Students.swift */; };
 		D7DD6E7C27E3BD0300976B16 /* CollegeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD6E7B27E3BD0300976B16 /* CollegeApp.swift */; };
-		D7DD6E7E27E3BD0300976B16 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD6E7D27E3BD0300976B16 /* ScheduleScreen.swift */; };
+		D7DD6E7E27E3BD0300976B16 /* StudentScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD6E7D27E3BD0300976B16 /* StudentScheduleScreen.swift */; };
 		D7DD6E8027E3BD0500976B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DD6E7F27E3BD0500976B16 /* Assets.xcassets */; };
 		D7DD6E8327E3BD0500976B16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DD6E8227E3BD0500976B16 /* Preview Assets.xcassets */; };
 		D7FF7190281939AA007D8CBF /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF718F281939AA007D8CBF /* Schedule.swift */; };
 		D7FF719328193E3D007D8CBF /* WeeksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF719228193E3D007D8CBF /* WeeksViewModel.swift */; };
 		D7FF719528193E5B007D8CBF /* WeeksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF719428193E5B007D8CBF /* WeeksScreen.swift */; };
 		D7FF719728193EBE007D8CBF /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF719628193EBE007D8CBF /* Week.swift */; };
+		F902D9A3227731883D703326 /* Pods_College.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2A431CB390F88448EE1A3F /* Pods_College.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F2A431CB390F88448EE1A3F /* Pods_College.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_College.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76EA804A7A5F4342A24C29AA /* Pods-College.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College.debug.xcconfig"; path = "Target Support Files/Pods-College/Pods-College.debug.xcconfig"; sourceTree = "<group>"; };
+		D706B2502821B8530014A16A /* HomeworkObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkObject.swift; sourceTree = "<group>"; };
 		D7209C4428175FC0003658F4 /* ServerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMock.swift; sourceTree = "<group>"; };
 		D7209C48281760AD003658F4 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		D7209C4B28176687003658F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D72890692815CF8200815561 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 		D728906C2815D4A100815561 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		D728906F2815E9F700815561 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
-		D72890712815EAEE00815561 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		D72890732815ED9D00815561 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		D72890732815ED9D00815561 /* StudentScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentScheduleViewModel.swift; sourceTree = "<group>"; };
+		D733C84A2820B7CB003E39CC /* SubjectActivityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectActivityObject.swift; sourceTree = "<group>"; };
+		D733C84D282152FC003E39CC /* DatabaseMock+Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatabaseMock+Groups.swift"; sourceTree = "<group>"; };
+		D733C852282163D1003E39CC /* GiveMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveMark.swift; sourceTree = "<group>"; };
 		D7B863952818942000DE538F /* StudentAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAccountScreen.swift; sourceTree = "<group>"; };
-		D7B863982818970200DE538F /* TabsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsScreen.swift; sourceTree = "<group>"; };
 		D7B8639A2818977D00DE538F /* StudentAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAccountViewModel.swift; sourceTree = "<group>"; };
-		D7B8639C28189D0600DE538F /* TabsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewModel.swift; sourceTree = "<group>"; };
 		D7B863A22818AAF900DE538F /* TeacherAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAccountScreen.swift; sourceTree = "<group>"; };
 		D7B863A42818AB0600DE538F /* TeacherAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAccountViewModel.swift; sourceTree = "<group>"; };
 		D7B863A72818ABA000DE538F /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		D7B863A92818ABA800DE538F /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		D7C716C42823ED4000832C09 /* Binding+Just.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Just.swift"; sourceTree = "<group>"; };
+		D7C7AF142825394600C0D23C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		D7C7AF162825396700C0D23C /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		D7C7AF182825434900C0D23C /* DatabaseMock+Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatabaseMock+Teacher.swift"; sourceTree = "<group>"; };
+		D7D8395A282076EA00F9938E /* TeacherScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherScheduleScreen.swift; sourceTree = "<group>"; };
+		D7D8395C282081B200F9938E /* TeacherScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherScheduleViewModel.swift; sourceTree = "<group>"; };
+		D7D8395F2820933700F9938E /* SubjectActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectActivityViewModel.swift; sourceTree = "<group>"; };
+		D7D839612820934300F9938E /* SubjectActivityScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectActivityScreen.swift; sourceTree = "<group>"; };
+		D7D8396428209CB700F9938E /* DatabaseMock+Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatabaseMock+Students.swift"; sourceTree = "<group>"; };
 		D7DD6E7827E3BD0300976B16 /* College.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = College.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DD6E7B27E3BD0300976B16 /* CollegeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeApp.swift; sourceTree = "<group>"; };
-		D7DD6E7D27E3BD0300976B16 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
+		D7DD6E7D27E3BD0300976B16 /* StudentScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentScheduleScreen.swift; sourceTree = "<group>"; };
 		D7DD6E7F27E3BD0500976B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7DD6E8227E3BD0500976B16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7FF718F281939AA007D8CBF /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		D7FF719228193E3D007D8CBF /* WeeksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksViewModel.swift; sourceTree = "<group>"; };
 		D7FF719428193E5B007D8CBF /* WeeksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksScreen.swift; sourceTree = "<group>"; };
 		D7FF719628193EBE007D8CBF /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		E5D64C5FF93B547464B2507A /* Pods-College.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College.release.xcconfig"; path = "Target Support Files/Pods-College/Pods-College.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,15 +90,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F902D9A3227731883D703326 /* Pods_College.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04FC689962321672B9616D9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F2A431CB390F88448EE1A3F /* Pods_College.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABBF70C0DEE928E36B61C328 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76EA804A7A5F4342A24C29AA /* Pods-College.debug.xcconfig */,
+				E5D64C5FF93B547464B2507A /* Pods-College.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D7209C4328175FB0003658F4 /* ServerMock */ = {
 			isa = PBXGroup;
 			children = (
+				D7D8396328209C9900F9938E /* DatabaseMock */,
 				D7209C4428175FC0003658F4 /* ServerMock.swift */,
 			);
 			path = ServerMock;
@@ -99,20 +142,20 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		D7209C4D2817E1E5003658F4 /* StudentAccount */ = {
+		D7209C4D2817E1E5003658F4 /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				D7B863952818942000DE538F /* StudentAccountScreen.swift */,
 				D7B8639A2818977D00DE538F /* StudentAccountViewModel.swift */,
 			);
-			path = StudentAccount;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		D72890682815CACC00815561 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				D7DD6E7D27E3BD0300976B16 /* ScheduleScreen.swift */,
-				D72890732815ED9D00815561 /* ScheduleViewModel.swift */,
+				D7DD6E7D27E3BD0300976B16 /* StudentScheduleScreen.swift */,
+				D72890732815ED9D00815561 /* StudentScheduleViewModel.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -129,22 +172,33 @@
 		D728906E2815E9CF00815561 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D728906F2815E9F700815561 /* Subject.swift */,
-				D7B863A72818ABA000DE538F /* Student.swift */,
-				D7B863A92818ABA800DE538F /* Teacher.swift */,
+				D7C7AF162825396700C0D23C /* Gender.swift */,
+				D7C7AF142825394600C0D23C /* Group.swift */,
 				D7FF718F281939AA007D8CBF /* Schedule.swift */,
+				D7B863A72818ABA000DE538F /* Student.swift */,
+				D728906F2815E9F700815561 /* Subject.swift */,
+				D7B863A92818ABA800DE538F /* Teacher.swift */,
 				D7FF719628193EBE007D8CBF /* Week.swift */,
+				D733C84C282135D4003E39CC /* RealmObjects */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D7B86397281896ED00DE538F /* Tabs */ = {
+		D733C84C282135D4003E39CC /* RealmObjects */ = {
 			isa = PBXGroup;
 			children = (
-				D7B863982818970200DE538F /* TabsScreen.swift */,
-				D7B8639C28189D0600DE538F /* TabsViewModel.swift */,
+				D733C84A2820B7CB003E39CC /* SubjectActivityObject.swift */,
+				D706B2502821B8530014A16A /* HomeworkObject.swift */,
 			);
-			path = Tabs;
+			path = RealmObjects;
+			sourceTree = "<group>";
+		};
+		D733C84F2821638A003E39CC /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				D733C852282163D1003E39CC /* GiveMark.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		D7B8639E28189E5F00DE538F /* Common */ = {
@@ -161,8 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				D72890682815CACC00815561 /* Schedule */,
-				D7209C4D2817E1E5003658F4 /* StudentAccount */,
-				D7B86397281896ED00DE538F /* Tabs */,
+				D7209C4D2817E1E5003658F4 /* Account */,
 			);
 			path = Student;
 			sourceTree = "<group>";
@@ -170,18 +223,57 @@
 		D7B863A02818AA3700DE538F /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
-				D7B863A12818AAD800DE538F /* TeacherAccount */,
+				D7D8395E2820931B00F9938E /* SubjectActivity */,
+				D7D83959282076A000F9938E /* Schedule */,
+				D7B863A12818AAD800DE538F /* Account */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
 		};
-		D7B863A12818AAD800DE538F /* TeacherAccount */ = {
+		D7B863A12818AAD800DE538F /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				D7B863A22818AAF900DE538F /* TeacherAccountScreen.swift */,
 				D7B863A42818AB0600DE538F /* TeacherAccountViewModel.swift */,
 			);
-			path = TeacherAccount;
+			path = Account;
+			sourceTree = "<group>";
+		};
+		D7C716C32823ED3100832C09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7C716C42823ED4000832C09 /* Binding+Just.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7D83959282076A000F9938E /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				D7D8395A282076EA00F9938E /* TeacherScheduleScreen.swift */,
+				D7D8395C282081B200F9938E /* TeacherScheduleViewModel.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		D7D8395E2820931B00F9938E /* SubjectActivity */ = {
+			isa = PBXGroup;
+			children = (
+				D7D839612820934300F9938E /* SubjectActivityScreen.swift */,
+				D7D8395F2820933700F9938E /* SubjectActivityViewModel.swift */,
+				D733C84F2821638A003E39CC /* Subviews */,
+			);
+			path = SubjectActivity;
+			sourceTree = "<group>";
+		};
+		D7D8396328209C9900F9938E /* DatabaseMock */ = {
+			isa = PBXGroup;
+			children = (
+				D7D8396428209CB700F9938E /* DatabaseMock+Students.swift */,
+				D733C84D282152FC003E39CC /* DatabaseMock+Groups.swift */,
+				D7C7AF182825434900C0D23C /* DatabaseMock+Teacher.swift */,
+			);
+			path = DatabaseMock;
 			sourceTree = "<group>";
 		};
 		D7DD6E6F27E3BD0300976B16 = {
@@ -189,6 +281,8 @@
 			children = (
 				D7DD6E7A27E3BD0300976B16 /* College */,
 				D7DD6E7927E3BD0300976B16 /* Products */,
+				ABBF70C0DEE928E36B61C328 /* Pods */,
+				04FC689962321672B9616D9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,13 +297,13 @@
 		D7DD6E7A27E3BD0300976B16 /* College */ = {
 			isa = PBXGroup;
 			children = (
+				D7C716C32823ED3100832C09 /* Extensions */,
 				D7209C4628176074003658F4 /* UI */,
 				D7209C4328175FB0003658F4 /* ServerMock */,
 				D728906E2815E9CF00815561 /* Models */,
 				D7DD6E7B27E3BD0300976B16 /* CollegeApp.swift */,
 				D7DD6E7F27E3BD0500976B16 /* Assets.xcassets */,
 				D7DD6E8127E3BD0500976B16 /* Preview Content */,
-				D72890712815EAEE00815561 /* Data.swift */,
 			);
 			path = College;
 			sourceTree = "<group>";
@@ -238,9 +332,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7DD6E8627E3BD0500976B16 /* Build configuration list for PBXNativeTarget "College" */;
 			buildPhases = (
+				4CAE63EF171103D081C52212 /* [CP] Check Pods Manifest.lock */,
 				D7DD6E7427E3BD0300976B16 /* Sources */,
 				D7DD6E7527E3BD0300976B16 /* Frameworks */,
 				D7DD6E7627E3BD0300976B16 /* Resources */,
+				218B2ACAB852C573B65BB441 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,33 +392,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		218B2ACAB852C573B65BB441 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-College/Pods-College-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-College/Pods-College-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-College/Pods-College-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CAE63EF171103D081C52212 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-College-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7DD6E7427E3BD0300976B16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D72890722815EAEE00815561 /* Data.swift in Sources */,
 				D728906A2815CF8200815561 /* StartScreen.swift in Sources */,
-				D7B8639D28189D0600DE538F /* TabsViewModel.swift in Sources */,
 				D7209C49281760AD003658F4 /* LoginScreen.swift in Sources */,
 				D72890702815E9F700815561 /* Subject.swift in Sources */,
-				D72890742815ED9D00815561 /* ScheduleViewModel.swift in Sources */,
+				D72890742815ED9D00815561 /* StudentScheduleViewModel.swift in Sources */,
 				D7B863AA2818ABA800DE538F /* Teacher.swift in Sources */,
+				D7D839602820933700F9938E /* SubjectActivityViewModel.swift in Sources */,
 				D7B863A82818ABA000DE538F /* Student.swift in Sources */,
-				D7B863992818970200DE538F /* TabsScreen.swift in Sources */,
 				D7FF719528193E5B007D8CBF /* WeeksScreen.swift in Sources */,
+				D733C853282163D1003E39CC /* GiveMark.swift in Sources */,
 				D7209C4528175FC0003658F4 /* ServerMock.swift in Sources */,
 				D7B863962818942000DE538F /* StudentAccountScreen.swift in Sources */,
+				D7D8396528209CB700F9938E /* DatabaseMock+Students.swift in Sources */,
 				D728906D2815D4A100815561 /* StartViewModel.swift in Sources */,
-				D7DD6E7E27E3BD0300976B16 /* ScheduleScreen.swift in Sources */,
+				D7DD6E7E27E3BD0300976B16 /* StudentScheduleScreen.swift in Sources */,
+				D7D8395D282081B200F9938E /* TeacherScheduleViewModel.swift in Sources */,
 				D7209C4C28176687003658F4 /* LoginViewModel.swift in Sources */,
+				D7C716C52823ED4100832C09 /* Binding+Just.swift in Sources */,
 				D7B8639B2818977D00DE538F /* StudentAccountViewModel.swift in Sources */,
+				D7D8395B282076EA00F9938E /* TeacherScheduleScreen.swift in Sources */,
+				D706B2512821B8530014A16A /* HomeworkObject.swift in Sources */,
 				D7B863A52818AB0600DE538F /* TeacherAccountViewModel.swift in Sources */,
 				D7FF7190281939AA007D8CBF /* Schedule.swift in Sources */,
+				D7D839622820934300F9938E /* SubjectActivityScreen.swift in Sources */,
+				D733C84B2820B7CB003E39CC /* SubjectActivityObject.swift in Sources */,
 				D7DD6E7C27E3BD0300976B16 /* CollegeApp.swift in Sources */,
 				D7B863A32818AAF900DE538F /* TeacherAccountScreen.swift in Sources */,
 				D7FF719328193E3D007D8CBF /* WeeksViewModel.swift in Sources */,
+				D7C7AF192825434900C0D23C /* DatabaseMock+Teacher.swift in Sources */,
+				D7C7AF172825396700C0D23C /* Gender.swift in Sources */,
+				D7C7AF152825394600C0D23C /* Group.swift in Sources */,
 				D7FF719728193EBE007D8CBF /* Week.swift in Sources */,
+				D733C84E282152FC003E39CC /* DatabaseMock+Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +593,7 @@
 		};
 		D7DD6E8727E3BD0500976B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76EA804A7A5F4342A24C29AA /* Pods-College.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,12 +608,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = thepsych0.College;
+				PRODUCT_BUNDLE_IDENTIFIER = Diploma.College;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -474,6 +624,7 @@
 		};
 		D7DD6E8827E3BD0500976B16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5D64C5FF93B547464B2507A /* Pods-College.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,12 +639,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = thepsych0.College;
+				PRODUCT_BUNDLE_IDENTIFIER = Diploma.College;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

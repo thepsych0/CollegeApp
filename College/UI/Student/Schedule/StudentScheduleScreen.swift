@@ -1,19 +1,20 @@
 import SwiftUI
 
-struct ScheduleScreen: View {
+struct StudentScheduleScreen: View {
     var body: some View {
         List {
             ForEach(Weekday.sorted, id: \.self) { weekday in
                 Section(
                     content: {
-                        if let subjects = CollegeData.group.schedule.subjectsArray(for: weekday) {
+                        if let subjects = viewModel.weekSchedule.subjectsArray(for: weekday), !subjects.isEmpty {
                             ForEach(subjects, id: \.slot) { item in
                                 SubjectRow(
                                     slot: item.slot,
-                                    subject: item.subject
+                                    subject: item.subject,
+                                    showingSheet: viewModel.showingSheet
                                 )
                                 .listRowBackground(
-                                    item.subject.wasPresent
+                                    item.subject.activity?.wasPresent ?? true
                                     ? Color(red: 0.94, green: 0.94, blue: 0.98)
                                     : Color(red: 1.0, green: 0.45, blue: 0.45)
                                 )
@@ -33,27 +34,50 @@ struct ScheduleScreen: View {
         .padding()
     }
 
-    init() {
+    init(viewModel: StudentScheduleViewModel) {
+        self.viewModel = viewModel
         UITableView.appearance().backgroundColor = UIColor(Color.clear)
     }
+
+    @ObservedObject private var viewModel: StudentScheduleViewModel
 }
 
 private struct SubjectRow: View {
     let slot: Slot
     let subject: Subject
+    @State var showingSheet: Bool
 
     var body: some View {
         VStack(spacing: 12) {
             HStack {
                 Text(slot.startTime)
                 Spacer()
-                Text(subject.type.rawValue)
+                Text(subject.type.name)
             }
-            if let grade = subject.grade {
+            if let mark = subject.activity?.mark {
                 HStack {
                     Text("Оценка")
                     Spacer()
-                    Text(grade)
+                    Text(String(mark))
+                }
+            }
+            if let homework = subject.homework, !homework.isEmpty {
+                HStack {
+                    Text("Д/З")
+                    Spacer()
+                    Button("Посмотреть") {
+                        showingSheet = true
+                    }
+                    .sheet(isPresented: $showingSheet) {
+                        VStack {
+                        Text("Домашнее задание")
+                            .font(.system(size: 30, weight: .medium))
+                            .padding(.bottom, 12)
+                        Text(homework)
+                            .font(.system(size: 20))
+                        }
+                        .padding()
+                    }
                 }
             }
         }
@@ -68,6 +92,11 @@ private struct EmptySubjectRow: View {
 
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleScreen()
+        StudentScheduleScreen(
+            viewModel: .init(
+                student: .testMale,
+                week: .init(startDate: .testMonday)
+            )
+        )
     }
 }

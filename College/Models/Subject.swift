@@ -4,49 +4,65 @@ struct Subject: Identifiable {
     }
 
     let type: SubjectType
-    let activity: Activity?
+    var activity: Activity?
+    var homework: String?
 
     init(type: SubjectType, activity: Activity? = nil) {
         self.type = type
         self.activity = activity
     }
 
-    var grade: String? {
-        guard let activity = activity else {
-            return nil
-        }
-        switch activity {
-        case .present(let grade):
-            return grade
-        case .absent:
-            return nil
-        }
-    }
-
-    var wasPresent: Bool {
-        guard let activity = activity else {
-            return true
-        }
-        switch activity {
-        case .present:
-            return true
-        case .absent:
-            return false
-        }
-    }
-
     enum Activity {
-        case present(grade: String?)
+        case present(mark: Int? = nil)
         case absent
+
+        var wasPresent: Bool {
+            switch self {
+            case .present:
+                return true
+            case .absent:
+                return false
+            }
+        }
+
+        var mark: Int? {
+            switch self {
+            case .present(let mark):
+                return mark
+            case .absent:
+                return nil
+            }
+        }
     }
 }
 
 extension Subject {
     enum SubjectType: String {
-        case math = "Математика"
-        case physics = "Физика"
-        case chemistry = "Химия"
-        case programming = "Программирование"
-        case literature = "Литература"
+        case sitebuilding
+        case blockchain
+        case project
+        case economics
+        case cryptoeconomics
+        case probabilityTheory
+        case pe
+
+        var name: String {
+            switch self {
+            case .sitebuilding:
+                return "Сайтостроение"
+            case .blockchain:
+                return "Технология блокчейн"
+            case .project:
+                return "Основы проектной деятельности"
+            case .economics:
+                return "Основы экономики"
+            case .cryptoeconomics:
+                return "Криптоэкономика"
+            case .probabilityTheory:
+                return "Теория вероятностей"
+            case .pe:
+                return "Физическая культура"
+            }
+        }
     }
 }

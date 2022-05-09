@@ -3,20 +3,20 @@ import Foundation
 final class ServerMock {
     static func authorizeStudent(login: String, password: String) -> Result<Student, ServerError> {
         let credentials = Credentials(login: login, password: password)
-        guard let student = ServerDatabaseMock.students[credentials] else {
+        guard let student = ServerDatabaseMock.Students.get(by: credentials) else {
             return .failure(.wrongCredentials)
         }
 
         return .success(student)
     }
 
-    static func authorizeTeacher(login: String, password: String) -> Result<Student, ServerError> {
+    static func authorizeTeacher(login: String, password: String) -> Result<Teacher, ServerError> {
         let credentials = Credentials(login: login, password: password)
-        guard let student = ServerDatabaseMock.students[credentials] else {
+        guard let teacher = ServerDatabaseMock.Teachers.get(by: credentials) else {
             return .failure(.wrongCredentials)
         }
 
-        return .success(student)
+        return .success(teacher)
     }
 
     static func getWeeks() -> [Week] {
@@ -34,23 +34,49 @@ final class ServerMock {
         }
         return weeks
     }
+
+    static func getSchedule(for teacher: Teacher, week: Week) -> TeacherSchedule {
+        var schedule = TeacherSchedule()
+        Weekday.allCases.forEach { weekday in
+            schedule[weekday] = [:]
+            teacher.groups.forEach { group in
+                group.schedule.subjectsArray(for: weekday)?
+                    .filter { $0.subject.type == teacher.subjectType }
+                    .forEach {
+                        schedule[weekday]?[$0.slot] = group
+                    }
+            }
+        }
+        return schedule
+    }
+
+    static func getSchedule(for student: Student, week: Week) -> StudentSchedule {
+        var schedule = StudentSchedule()
+        Weekday.allCases.forEach { weekday in
+            schedule[weekday] = [:]
+            guard let group = ServerDatabaseMock.Groups.get(by: student.groupNumber) else { return }
+            group.schedule.subjectsArray(for: weekday)?
+                .forEach {
+                    schedule[weekday]?[$0.slot] = $0.subject
+                }
+        }
+        return schedule
+    }
+
+    static func getWeek(by date: Date) -> Week? {
+        let calendar = Calendar.current
+        let previousMonday = calendar.date(byAdding: .weekOfYear, value: -1, to: date.next(.monday))
+        return getWeeks().first(where: { $0.startDate == previousMonday })
+    }
 }
 
-fileprivate struct ServerDatabaseMock {
-    static let students: [Credentials: Student] = [
-        .init(login: "student1", password: "pass1"): .init(
-            fullName: "Иван Иванов",
-            group: "121",
-            gender: .male
-        )
-    ]
-}
+final class ServerDatabaseMock {}
 
 enum ServerError: Error {
     case wrongCredentials
 }
 
-fileprivate struct Credentials: Equatable, Hashable {
+struct Credentials: Equatable, Hashable {
     let login: String
     let password: String
 

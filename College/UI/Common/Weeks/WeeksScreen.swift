@@ -3,38 +3,61 @@ import SwiftUI
 struct WeeksScreen: View {
     var body: some View {
         NavigationView {
-            List(viewModel.weeks, id: \.startDate) { week in
-                SubjectRow(week: week)
-                    .contentShape(Rectangle())
+            ScrollViewReader { proxy in
+                List(viewModel.weeks, id: \.startDate) { week in
+                    WeekRow(viewModel: viewModel, week: week)
+                        .contentShape(Rectangle())
+                }
+                .onAppear {
+                    guard let currentWeek = viewModel.weeks
+                        .first(where: { $0.state == .current }) else {
+                        return
+                    }
+                    proxy.scrollTo(
+                        currentWeek.startDate,
+                        anchor: .center
+                    )
+                }
+                .navigationTitle("Недели")
+                .toolbar {
+                    Button(
+                        action: {
+                            isPresented = false
+                        }
+                    ) {
+                        Image(systemName: "xmark")
+                    }
+                }
             }
-            .navigationTitle("Недели")
         }
     }
 
-    init(viewModel: WeekViewModel) {
+    init(viewModel: WeekViewModel, isPresented: Binding<Bool>) {
         self.viewModel = viewModel
+        self._isPresented = isPresented
     }
 
     @ObservedObject private var viewModel: WeekViewModel
+    @Binding private var isPresented: Bool
 }
 
-private struct SubjectRow: View {
+private struct WeekRow: View {
+    let viewModel: WeekViewModel
     let week: Week
 
     var body: some View {
         NavigationLink(
-            destination: ScheduleScreen()
+            destination: viewModel.destination(week: week)
         ) {
-            HStack {
+            VStack(alignment: .leading, spacing: 10) {
                 Text(
-                    DateFormatter.standardDay.string(from: week.startDate)
+                    "C \(DateFormatter.standardDay.string(from: week.startDate))"
                 )
-                Spacer()
-                Text("—")
-                Spacer()
+                .padding(.top, 10)
                 Text(
-                    DateFormatter.standardDay.string(from: week.endDate)
+                    "По \(DateFormatter.standardDay.string(from: week.endDate))"
                 )
+                .padding(.bottom, 10)
             }
         }
         .listRowBackground(getColor(weekState: week.state))
@@ -47,13 +70,16 @@ private struct SubjectRow: View {
         case .current:
             return .blue
         case .future:
-            return .white
+            return Color(red: 0.94, green: 0.94, blue: 0.98)
         }
     }
 }
 
 struct WeeksScreen_Previews: PreviewProvider {
     static var previews: some View {
-        WeeksScreen(viewModel: .init())
+        WeeksScreen(
+            viewModel: .init(userType: .student),
+            isPresented: .just(value: true)
+        )
     }
 }

@@ -35,10 +35,11 @@ struct LoginScreen: View {
                         .frame(width: 200, height: 40)
                     )
             }
+            .disabled(!allFieldsFilled)
             .fullScreenCover(
                 isPresented: $viewModel.shouldFinishLogin,
                 content: {
-                    viewModel.destination
+                    viewModel.destination(isPresented: $viewModel.shouldFinishLogin)
                 }
             )
             .padding()
@@ -58,8 +59,8 @@ struct LoginScreen: View {
         .padding()
     }
 
-    @State private var username = "student1"
-    @State private var password = "pass1"
+    @State private var username = ""
+    @State private var password = ""
 
     private var allFieldsFilled: Bool {
         return !username.isEmpty && !password.isEmpty

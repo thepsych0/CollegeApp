@@ -15,6 +15,13 @@ struct Week {
             return .current
         }
     }
+
+    func getDate(for weekday: Weekday) -> Date {
+        var dayComponent = DateComponents()
+        dayComponent.day = weekday.index
+        let date = Calendar.current.date(byAdding: dayComponent, to: startDate)
+        return date!
+    }
 }
 
 enum Weekday: Int, CaseIterable {
@@ -45,8 +52,17 @@ enum Weekday: Int, CaseIterable {
         }
     }
 
+    var index: Int {
+        switch self {
+        case .sunday:
+            return 6
+        case .monday, .tuesday, .wednesday, .thursday, .friday, .saturday:
+            return rawValue - 1
+        }
+    }
+
     static var sorted: [Weekday] {
-        return Weekday.allCases.sorted(by: { $0.rawValue < $1.rawValue })
+        return Weekday.allCases.sorted(by: { $0.index < $1.index })
     }
 }
 

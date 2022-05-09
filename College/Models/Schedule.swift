@@ -1,6 +1,6 @@
-typealias Schedule = [Weekday: [Slot: Subject]]
+typealias StudentSchedule = [Weekday: [Slot: Subject]]
 
-extension Schedule {
+extension StudentSchedule {
     func subjectsArray(for weekday: Weekday) -> [(slot: Slot, subject: Subject)]? {
         guard let daySchedule = self[weekday] else {
             return nil
@@ -9,7 +9,7 @@ extension Schedule {
     }
 }
 
-enum Slot {
+enum Slot: Int {
     case slot1
     case slot2
     case slot3
@@ -32,5 +32,18 @@ enum Slot {
         case .slot6:
             return "17:00"
         }
+    }
+}
+
+typealias TeacherSchedule = [Weekday: [Slot: Group]]
+
+extension TeacherSchedule {
+    func groupsArray(for weekday: Weekday) -> [(slot: Slot, group: Group)]? {
+        guard let daySchedule = self[weekday] else {
+            return nil
+        }
+        return daySchedule
+            .map { (slot: $0.key, group: $0.value) }
+            .sorted(by: { $0.slot.rawValue < $1.slot.rawValue })
     }
 }
