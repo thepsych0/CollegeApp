@@ -6,7 +6,13 @@ import RealmSwift
 struct CollegeApp: SwiftUI.App {
 
     init() {
-        let config = Realm.Configuration(schemaVersion: 5)
+        var key = Data(count: 64)
+        _ = key.withUnsafeMutableBytes {
+            (pointer: UnsafeMutableRawBufferPointer) in
+            SecRandomCopyBytes(kSecRandomDefault, 64, pointer.baseAddress!)
+        }
+    
+        let config = Realm.Configuration(encryptionKey: Realm.Encryption.getKey(), schemaVersion: 5)
         Realm.Configuration.defaultConfiguration = config
     }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D706B2512821B8530014A16A /* HomeworkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706B2502821B8530014A16A /* HomeworkObject.swift */; };
+		D71374E028400EA300172E89 /* Realm+Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71374DF28400EA300172E89 /* Realm+Encryption.swift */; };
 		D7209C4528175FC0003658F4 /* ServerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C4428175FC0003658F4 /* ServerMock.swift */; };
 		D7209C49281760AD003658F4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C48281760AD003658F4 /* LoginScreen.swift */; };
 		D7209C4C28176687003658F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7209C4B28176687003658F4 /* LoginViewModel.swift */; };
@@ -48,6 +49,7 @@
 		1F2A431CB390F88448EE1A3F /* Pods_College.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_College.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EA804A7A5F4342A24C29AA /* Pods-College.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College.debug.xcconfig"; path = "Target Support Files/Pods-College/Pods-College.debug.xcconfig"; sourceTree = "<group>"; };
 		D706B2502821B8530014A16A /* HomeworkObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkObject.swift; sourceTree = "<group>"; };
+		D71374DF28400EA300172E89 /* Realm+Encryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Encryption.swift"; sourceTree = "<group>"; };
 		D7209C4428175FC0003658F4 /* ServerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMock.swift; sourceTree = "<group>"; };
 		D7209C48281760AD003658F4 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		D7209C4B28176687003658F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C716C42823ED4000832C09 /* Binding+Just.swift */,
+				D71374DF28400EA300172E89 /* Realm+Encryption.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			files = (
 				D728906A2815CF8200815561 /* StartScreen.swift in Sources */,
 				D7209C49281760AD003658F4 /* LoginScreen.swift in Sources */,
+				D71374E028400EA300172E89 /* Realm+Encryption.swift in Sources */,
 				D72890702815E9F700815561 /* Subject.swift in Sources */,
 				D72890742815ED9D00815561 /* StudentScheduleViewModel.swift in Sources */,
 				D7B863AA2818ABA800DE538F /* Teacher.swift in Sources */,

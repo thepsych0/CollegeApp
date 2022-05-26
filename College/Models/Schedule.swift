@@ -5,7 +5,9 @@ extension StudentSchedule {
         guard let daySchedule = self[weekday] else {
             return nil
         }
-        return daySchedule.map { (slot: $0.key, subject: $0.value) }
+        return daySchedule
+            .map { (slot: $0.key, subject: $0.value) }
+            .sorted(by: { $0.slot.rawValue < $1.slot.rawValue })
     }
 }
 

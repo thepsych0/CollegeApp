@@ -168,7 +168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "66D68B28-CDFF-46F8-A8CA-2E4A56ECB581"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "College/UI/Teacher/SubjectActivity/SubjectActivityViewModel.swift"
@@ -328,7 +328,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3FDECF5F-7C67-462E-9C5B-66E07E5A0527"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "College/UI/Teacher/SubjectActivity/SubjectActivityViewModel.swift"
