@@ -4,6 +4,10 @@ import Combine
 @MainActor final class TeacherAccountViewModel: ObservableObject {
     @Published var teacher: Teacher
 
+    var groups: [Group] {
+        ServerMock.getGroups(for: teacher)
+    }
+
     init(teacher: Teacher) {
         self.teacher = teacher
         Teacher.current = teacher

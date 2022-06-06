@@ -1,6 +1,8 @@
+import RealmSwift
+
 extension ServerDatabaseMock {
     enum Students {
-        private static let students: [Credentials: Student] = [
+        private static let initialStudents: [Credentials: Student] = [
             .init(login: "student1", password: "pass1"): .init(
                 login: "student1",
                 fullName: "Студент Первый",
@@ -75,18 +77,47 @@ extension ServerDatabaseMock {
             ),
         ]
 
+        static func injectInitialStudents() {
+            let realm = try! Realm()
+
+            try! realm.write {
+                initialStudents.forEach { element in
+                    realm.add(element.key)
+                    realm.add(element.value)
+                }
+            }
+        }
+
         static func get(by credentials: Credentials) -> Student? {
-            students.first(where: { $0.key == credentials })?.value
+            let realm = try! Realm()
+
+            guard !realm.objects(CredentialsObject.self).where({
+                $0.login == credentials.login && $0.password == credentials.password
+            }).isEmpty else {
+                return nil
+            }
+
+            return realm.objects(StudentObject.self).where({ $0.login == credentials.login }).first
         }
 
         static func get(by login: String) -> Student? {
-            students.first(where: { $0.key.login == login })?.value
+            let realm = try! Realm()
+
+            return realm.objects(StudentObject.self).where({ $0.login == login }).first
         }
 
         static func get(by groupNumber: Int) -> [Student] {
-            students
-                .filter { $0.value.groupNumber == groupNumber }
-                .map { $0.value }
+            let realm = try! Realm()
+
+            return Array(
+                realm.objects(StudentObject.self).where({ $0.groupNumber == groupNumber })
+            )
+        }
+
+        static func getAll() -> [Student] {
+            let realm = try! Realm()
+
+            return Array(realm.objects(StudentObject.self))
         }
     }
 }

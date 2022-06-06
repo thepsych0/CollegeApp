@@ -18,7 +18,7 @@ struct TeacherAccountScreen: View {
             Text("Группы: ")
                 .font(.system(size: 20, weight: .medium))
             + Text(
-                viewModel.teacher.groups
+                viewModel.groups
                     .map { String($0.number) }
                     .joined(separator: ", ")
             )
@@ -91,8 +91,9 @@ struct TeacherAccountScreen_Previews: PreviewProvider {
 extension Teacher {
     static var test: Teacher {
         .init(
+            login: "test",
             fullName: "Тест Тестовый",
-            groups: [],
+            groupNumbers: [],
             subjectType: .economics
         )
     }

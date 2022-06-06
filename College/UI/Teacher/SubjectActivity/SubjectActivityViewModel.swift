@@ -1,6 +1,6 @@
-import SwiftUI
 import Combine
 import RealmSwift
+import SwiftUI
 
 @MainActor class SubjectActivityViewModel: ObservableObject {
     @Published var group: Group
@@ -9,7 +9,7 @@ import RealmSwift
     @Published var date: Date
     @Published var slot: Slot
 
-    @Published var activityDict: [Student: SubjectActivityObject] = [:]
+    @Published var activityDict: [String: SubjectActivityObject] = [:]
 
     @Published var homeworkText: String = ""
     @Published private var homework: HomeworkObject?
@@ -37,7 +37,7 @@ import RealmSwift
     }
 
     func setStudentPresence(_ wasPresent: Bool, for student: Student) {
-        if let activity = activityDict[student] {
+        if let activity = activityDict[student.login] {
             try! realm.write {
                 activity.setStudentPresence(wasPresent)
                 updateActivities()
@@ -59,7 +59,7 @@ import RealmSwift
     }
 
     func setStudentMark(_ mark: Int, for student: Student) {
-        if let activity = activityDict[student] {
+        if let activity = activityDict[student.login] {
             try! realm.write {
                 activity.setStudentMark(mark)
                 updateActivities()
@@ -104,35 +104,25 @@ import RealmSwift
 
     private func updateActivities() {
         activityDict = [:]
-        let filters: [String: Any] = [
-            "groupNumber": group.number,
-            "slotRawValue": slot.rawValue,
-            "dateString": "'\(DateFormatter.standardDay.string(from: date))'"
-        ]
-        let activities = realm.objects(SubjectActivityObject.self).filter(
-            filters
-                .map { "\($0.key) == \($0.value)" }
-                .joined(separator: " AND ")
-        )
+        let activities = realm.objects(SubjectActivityObject.self).where({
+            $0.groupNumber == group.number &&
+            $0.slotRawValue == slot.rawValue &&
+            $0.dateString == DateFormatter.standardDay.string(from: date)
+        })
         activities.forEach {
             if let student = ServerDatabaseMock.Students.get(by: $0.studentLogin) {
-                activityDict[student] = $0
+                activityDict[student.login] = $0
             }
         }
     }
 
     private func updateHomework() {
-        let filters: [String: Any] = [
-            "groupNumber": group.number,
-            "slotRawValue": slot.rawValue,
-            "dateString": "'\(DateFormatter.standardDay.string(from: date))'"
-        ]
         guard let homework = realm.objects(HomeworkObject.self)
-            .filter(
-                filters
-                    .map { "\($0.key) == \($0.value)" }
-                    .joined(separator: " AND ")
-            )
+            .where({
+                $0.groupNumber == group.number &&
+                $0.slotRawValue == slot.rawValue &&
+                $0.dateString == DateFormatter.standardDay.string(from: date)
+            })
             .first else { return }
         self.homework = homework
     }

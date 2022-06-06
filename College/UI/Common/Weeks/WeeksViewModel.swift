@@ -10,7 +10,7 @@ import Combine
         self.weeks = ServerMock.getWeeks()
     }
 
-    func destination(week: Week) -> AnyView {
+    func destination(week: Week) -> AnyView? {
         switch userType {
         case .teacher:
             let viewModel = TeacherScheduleViewModel(teacher: Teacher.current!, week: week)
@@ -19,6 +19,8 @@ import Combine
         case .student:
             let viewModel = StudentScheduleViewModel(student: Student.current!, week: week)
             return AnyView(StudentScheduleScreen(viewModel: viewModel))
+        case .admin:
+            return nil
         }
     }
 }

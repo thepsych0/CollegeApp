@@ -79,6 +79,8 @@ struct LoginScreen: View {
 
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreen(viewModel: .init(userType: .teacher))
+        LoginScreen(
+            viewModel: .init(userType: .teacher)
+        )
     }
 }

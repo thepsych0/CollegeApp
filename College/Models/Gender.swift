@@ -1,4 +1,4 @@
-enum Gender {
+enum Gender: String {
     case male
     case female
 }

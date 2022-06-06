@@ -97,5 +97,9 @@ extension ServerDatabaseMock {
         static func get(by number: Int) -> Group? {
             groups.first(where: { $0.number == number })
         }
+
+        static func all() -> [Group] {
+            groups
+        }
     }
 }

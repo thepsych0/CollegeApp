@@ -26,40 +26,30 @@ import SwiftUI
 
     private func updateActivities() {
         weekSchedule.forEach { item in
-            item.value.forEach {
-                let filters: [String: Any] = [
-                    "groupNumber": student.groupNumber,
-                    "slotRawValue": $0.key.rawValue,
-                    "dateString": "'\(DateFormatter.standardDay.string(from: week.getDate(for: item.key)))'"
-                ]
+            item.value.forEach { value in
                 guard let activityObject = realm.objects(SubjectActivityObject.self)
-                    .filter(
-                        filters
-                            .map { "\($0.key) == \($0.value)" }
-                            .joined(separator: " AND ")
-                    )
+                    .where({
+                        $0.groupNumber == student.groupNumber &&
+                        $0.slotRawValue == value.key.rawValue &&
+                        $0.dateString == DateFormatter.standardDay.string(from: week.getDate(for: item.key))
+                    })
                     .first else { return }
-                weekSchedule[item.key]?[$0.key]?.activity = activityObject.activity
+                weekSchedule[item.key]?[value.key]?.activity = activityObject.activity
             }
         }
     }
 
     private func updateHomework() {
         weekSchedule.forEach { item in
-            item.value.forEach {
-                let filters: [String: Any] = [
-                    "groupNumber": student.groupNumber,
-                    "slotRawValue": $0.key.rawValue,
-                    "dateString": "'\(DateFormatter.standardDay.string(from: week.getDate(for: item.key)))'"
-                ]
+            item.value.forEach { value in
                 guard let homeworkObject = realm.objects(HomeworkObject.self)
-                    .filter(
-                        filters
-                            .map { "\($0.key) == \($0.value)" }
-                            .joined(separator: " AND ")
-                    )
-                        .first else { return }
-                weekSchedule[item.key]?[$0.key]?.homework = homeworkObject.text
+                    .where({
+                        $0.groupNumber == student.groupNumber &&
+                        $0.slotRawValue == value.key.rawValue &&
+                        $0.dateString == DateFormatter.standardDay.string(from: week.getDate(for: item.key))
+                    })
+                    .first else { return }
+                weekSchedule[item.key]?[value.key]?.homework = homeworkObject.text
             }
         }
     }

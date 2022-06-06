@@ -1,15 +1,10 @@
 import SwiftUI
 import Combine
 
-@MainActor class StartViewModel: ObservableObject {
-    @Published var userType: UserType? = nil
-
-    func userTypeSelected(_ userType: UserType) {
-        self.userType = userType
-    }
-}
+@MainActor class StartViewModel: ObservableObject {}
 
 enum UserType: String {
     case teacher = "Преподаватель"
     case student = "Студент"
+    case admin = "Администратор"
 }

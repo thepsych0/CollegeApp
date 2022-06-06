@@ -8,12 +8,12 @@ final class SubjectActivityObject: Object {
         return .init(rawValue: subjectTypeRawValue)!
     }
 
-    @objc dynamic var dateString = ""
+    @objc dynamic private(set) var dateString = ""
     var date: Date {
         return DateFormatter.standardDay.date(from: dateString)!
     }
 
-    @objc dynamic private var slotRawValue = 0
+    @objc dynamic private(set) var slotRawValue = 0
     var slot: Slot {
         return Slot(rawValue: slotRawValue)!
     }

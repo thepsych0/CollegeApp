@@ -12,8 +12,19 @@ struct CollegeApp: SwiftUI.App {
             SecRandomCopyBytes(kSecRandomDefault, 64, pointer.baseAddress!)
         }
     
-        let config = Realm.Configuration(encryptionKey: Realm.Encryption.getKey(), schemaVersion: 5)
+        let config = Realm.Configuration(encryptionKey: Realm.Encryption.getKey(), schemaVersion: 7)
         Realm.Configuration.defaultConfiguration = config
+
+        if !UserDefaults.standard.bool(forKey: "notFirstLaunch") {
+            injectInitialData()
+        }
+
+        UserDefaults.standard.set(true, forKey: "notFirstLaunch")
+    }
+
+    private func injectInitialData() {
+        ServerDatabaseMock.Students.injectInitialStudents()
+        ServerDatabaseMock.Teachers.injectInitialTeachers()
     }
 
     var body: some Scene {

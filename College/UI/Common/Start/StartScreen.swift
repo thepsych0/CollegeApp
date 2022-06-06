@@ -11,7 +11,8 @@ struct StartScreen: View {
                 ForEach(
                     [
                         UserType.teacher,
-                        UserType.student
+                        UserType.student,
+                        UserType.admin
                     ],
                     id: \.self
                 ) { userType in
@@ -41,7 +42,7 @@ struct StartScreen: View {
     @ObservedObject private var viewModel = StartViewModel()
 }
 
-struct StartView_Previews: PreviewProvider {
+struct StartScreen_Previews: PreviewProvider {
     static var previews: some View {
         StartScreen()
     }

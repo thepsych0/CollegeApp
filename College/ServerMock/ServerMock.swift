@@ -19,6 +19,14 @@ final class ServerMock {
         return .success(teacher)
     }
 
+    static func authorizeAdmin(login: String, password: String) -> Result<Void, ServerError> {
+        guard login == "admin", password == "admin" else {
+            return .failure(.wrongCredentials)
+        }
+
+        return .success(())
+    }
+
     static func getWeeks() -> [Week] {
         let earliestDate = DateFormatter.standardDay.date(from: "01.01.2022")!
         let latestDate = DateFormatter.standardDay.date(from: "30.06.2022")!
@@ -39,7 +47,7 @@ final class ServerMock {
         var schedule = TeacherSchedule()
         Weekday.allCases.forEach { weekday in
             schedule[weekday] = [:]
-            teacher.groups.forEach { group in
+            getGroups(for: teacher).forEach { group in
                 group.schedule.subjectsArray(for: weekday)?
                     .filter { $0.subject.type == teacher.subjectType }
                     .forEach {
@@ -48,6 +56,10 @@ final class ServerMock {
             }
         }
         return schedule
+    }
+
+    static func getGroups(for teacher: Teacher) -> [Group] {
+        teacher.groupNumbers.compactMap { ServerDatabaseMock.Groups.get(by: $0) }
     }
 
     static func getSchedule(for student: Student, week: Week) -> StudentSchedule {
@@ -74,13 +86,4 @@ final class ServerDatabaseMock {}
 
 enum ServerError: Error {
     case wrongCredentials
-}
-
-struct Credentials: Equatable, Hashable {
-    let login: String
-    let password: String
-
-    static func == (lhs: Credentials, rhs: Credentials) -> Bool {
-        return lhs.login == rhs.login && lhs.password == rhs.password
-    }
 }

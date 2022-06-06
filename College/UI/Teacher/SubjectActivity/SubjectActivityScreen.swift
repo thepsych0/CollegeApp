@@ -6,7 +6,7 @@ struct SubjectActivityScreen: View {
             List {
                 Section("Студенты") {
                     ForEach(viewModel.students, id: \.fullName) { student in
-                        let activity = viewModel.activityDict[student]?.activity
+                        let activity = viewModel.activityDict[student.login]?.activity
                         VStack(alignment: .leading, spacing: 10) {
                             Text(student.fullName)
                                 .font(.system(size: 20, weight: .medium))
@@ -36,7 +36,7 @@ struct SubjectActivityScreen: View {
                             }
                         }
                         .listRowBackground(
-                            viewModel.activityDict[student]?.activity?.wasPresent ?? true
+                            viewModel.activityDict[student.login]?.activity?.wasPresent ?? true
                             ? Color(red: 0.94, green: 0.94, blue: 0.98)
                             : Color.red
                         )
@@ -102,7 +102,7 @@ struct SubjectActivityScreen: View {
     private func wasPresent(student: Student) -> Binding<Bool> {
         .init(
             get: {
-                viewModel.activityDict[student]?.activity?.wasPresent ?? true
+                viewModel.activityDict[student.login]?.activity?.wasPresent ?? true
             },
             set: { wasPresent in
                 saveActivity(student: student, wasPresent: wasPresent)
